@@ -1,0 +1,22 @@
+//Эта программа написана хз зачем, но она всецело и полностью обьясняет фразу, из-за которой я решил занятся программированием:
+// "Я хз зачем это нужно, но я это сделал"
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("введите текст: ");
+		Scanner val = new Scanner(System.in);
+		String x = val.nextLine();
+		char[] res = x.toCharArray();
+		int ix = res.length;
+		for (int i = 0; i <= res.length ; i++) {                  // Первый прогон, для инициаизации всего предложения(Слова)
+				System.out.println("");                               // Для переноса строки
+				for (int z=0; z<ix; z++) {                            //Цикл для вывода слов
+					System.out.printf("%s", res[z]); 
+				}
+				ix = ix-1;                                            // Уменьшение результата на 1
+			}	
+		val.close();
+	}
+}
